@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Skill Matcher</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            background-color: #ff0000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Main container */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+
+        /* Left Section */
+        .left-section {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .left-section label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        textarea, input, select {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Button */
+        .submit-btn {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .submit-btn:hover {
+            background-color: #d00000;
+        }
+
+        /* Right Section (Response) */
+        .right-section {
+            flex: 1;
+            padding: 20px;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+            height: auto;
+        }
+
+        .response-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        ATS SKILL MATCHER
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <form method="POST" enctype="multipart/form-data">
+                <!-- Job Description -->
+                <label for="job_description">Job Description</label>
+                <textarea name="job_description" rows="8" placeholder="Paste the job description here..." required></textarea>
+
+                <!-- Resume Upload -->
+                <label for="resume_file">Upload resume</label>
+                <input type="file" name="resume_file" accept=".pdf" required>
+
+                <!-- Task Selection -->
+                <label for="task">Select Task</label>
+                <select name="task" required>
+                    <option value="analyze_resume">Analyze Resume</option>
+                    <option value="improve_skills">Suggest Skill Improvements</option>
+                    <option value="percentage_match">Percentage Match</option>
+                </select>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Right Section (Response/Error) -->
+        <div class="right-section">
+            {% if response %}
+                <div class="response-title">Response</div>
+                <div>{{ response|safe}}</div>
+            {% elif error %}
+                <div class="error">Error</div>
+                <p>{{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

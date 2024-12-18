@@ -1,0 +1,5 @@
+Flask==2.2.2
+python-dotenv==0.20.0
+PyMuPDF==1.18.19
+Pillow==9.0.1
+google-generativeai==0.1.0
