@@ -107,7 +107,7 @@ Access the application in your browser at:
 ## 🎨 *Screenshots*
 
 ### *Main Interface*
-![Main UI](https://via.placeholder.com/600x400.png?text=UI+Image+Placeholder)
+![Main UI](C:\Users\dteja\Downloads\Today\Screenshot 2024-12-18 194246.png)
 
 ### *Response Example*
 - Structured insights displayed in Markdown format.  
