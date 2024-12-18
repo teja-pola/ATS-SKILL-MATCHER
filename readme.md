@@ -4,7 +4,9 @@
 *ATS Skill Checker* is a Flask-based web application designed to evaluate resumes against job descriptions using AI. It analyzes resumes, provides ATS match percentages, and suggests improvements to align resumes with job descriptions. The app uses Google Gemini AI to process and return structured insights, helping candidates tailor their resumes to specific roles effectively.
 
 ---
-
+### *Main Interface*
+![image](https://github.com/user-attachments/assets/ecb50ec8-d658-4b7a-8681-30685b90d9b6)
+---
 ## 🚀 *Features*
 
 1. *Analyze Resume*  
@@ -106,8 +108,7 @@ Access the application in your browser at:
 
 ## 🎨 *Screenshots*
 
-### *Main Interface*
-![Main UI](C:\Users\dteja\Downloads\Today\Screenshot 2024-12-18 194246.png)
+
 
 ### *Response Example*
 - Structured insights displayed in Markdown format.  
