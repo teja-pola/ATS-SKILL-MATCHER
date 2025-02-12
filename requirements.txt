@@ -1,5 +1,7 @@
 Flask==2.2.2
 python-dotenv==0.20.0
-PyMuPDF==1.18.19
-Pillow==9.0.1
+PyMuPDF==1.25.3
+Pillow>=11.1.0
 google-generativeai==0.1.0
+grpcio-status>=1.48.2
+
