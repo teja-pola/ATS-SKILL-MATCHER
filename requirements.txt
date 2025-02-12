@@ -4,7 +4,6 @@ PyMuPDF==1.25.3
 Pillow>=11.1.0
 google-generativeai==0.1.0
 grpcio-status>=1.48.2
-Flask==2.2.5
 Werkzeug==2.2.3
 gunicorn==22.10.0
 
